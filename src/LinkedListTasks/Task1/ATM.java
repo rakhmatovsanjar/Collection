@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 class ATM {
     private int balance = 0;
-    private int count = 0;
-    private ArrayList<Money> monies = new ArrayList<>();
+    private int count=0;
+    private ArrayList<Money> monies=new ArrayList<>();
     private MessageInterface messageListener;
     private ShowMoneyInfoInterface moneyListener;
 
