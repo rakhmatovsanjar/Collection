@@ -18,11 +18,6 @@ public class ArrayListMain {
         arrayList1.set(1, "Dilshod");
         System.out.println(arrayList1);
 
-        /**
-         // arrayList1.clear();
-         // System.out.println(arrayList1);
-         */
-
         ArrayList<String> arrayList2 = new ArrayList<>();
         arrayList2.add("1");
         arrayList2.add("2");
@@ -51,5 +46,12 @@ public class ArrayListMain {
         System.out.println(arrayList1);
         Collections.sort(arrayList1);
         System.out.println(arrayList1);
+        ArrayList<Integer> number = new ArrayList<>();
+        number.add(5);
+        number.add(8);
+        number.add(3);
+        number.add(2);
+        Collections.sort(number);
+        System.out.println(number);
     }
 }
