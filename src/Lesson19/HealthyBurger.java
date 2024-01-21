@@ -1,23 +1,22 @@
 package Lesson19;
+
+import java.util.ArrayList;
+
 class HealthyBurger extends Hamburger {
-    private final String[] additionalItems;
+    private final ArrayList<String> additionalItems;
     private final int maxAdditionalItems;
 
     HealthyBurger() {
         super("Healthy Burger", 7.49, "Kurka go'shti");
         this.maxAdditionalItems = 6;
-        this.additionalItems = new String[maxAdditionalItems];
+        this.additionalItems = new ArrayList<>();
     }
-    public String[] getAdditionalItems() {
+    public ArrayList<String> getAdditionalItems() {
         return additionalItems;
     }
     public void addAdditionalItem(String item) {
-        for (int i = 0; i < maxAdditionalItems; i++) {
-            if (additionalItems[i] == null) {
-                additionalItems[i] = item;
-                System.out.println(item + " Sog'lom Burgerga qo'shildi.");
-                return;
-            }
+        if (additionalItems.size()<=maxAdditionalItems){
+            additionalItems.add(item);
         }
         System.out.println("Kechirasiz, siz ortiq qo'sha olmaysiz " + maxAdditionalItems + " qo'shimcha elementlar.");
     }
