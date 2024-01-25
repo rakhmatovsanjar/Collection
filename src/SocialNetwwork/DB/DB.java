@@ -1,18 +1,13 @@
 package SocialNetwwork.DB;
 
-import SocialNetwwork.Data.VideoData;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class DB {
-    private String nekName;
-    private String userName;
-    private String title;
-    private String despription;
-    private int likeCount;
-    private int disLikeCount;
-    private List<VideoData> videoData=new ArrayList<>();
+    private final String nekName;
+    private final String userName;
+    private final String title;
+    private final String despription;
+    private final int likeCount;
+    private final int disLikeCount;
 
     public DB(String nekName, String userName, String title, String despription, int likeCount, int disLikeCount) {
         this.nekName = nekName;
@@ -21,16 +16,6 @@ public class DB {
         this.despription = despription;
         this.likeCount = likeCount;
         this.disLikeCount = disLikeCount;
-    }
-
-    public DB(String nekName, String userName, List<VideoData> videoData) {
-        this.nekName = nekName;
-        this.userName = userName;
-        this.videoData = videoData;
-    }
-
-    public String getTitle() {
-        return title;
     }
 
     @Override
